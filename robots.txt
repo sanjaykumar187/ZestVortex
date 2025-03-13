@@ -1,4 +1,0 @@
-txt
-
-User-agent: *
-Allow: /
