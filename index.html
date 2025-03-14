@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TrendOrbit: Latest trending news and blogs in Hindi for India and English for the USA.">
+    <meta name="keywords" content="trending news, IPL 2025, Holi 2025, Samsung S25 Edge, AI trends, TrendOrbit">
+    <meta name="author" content="Sanjay Kumar">
+    <title>TrendOrbit - Trending News & Blogs</title>
+    <link rel="alternate" href="https://sanjaykumar187.github.io/trendorbit/" hreflang="en-US" />
+    <link rel="alternate" href="https://sanjaykumar187.github.io/trendorbit/#hindi" hreflang="hi-IN" />
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fa;
+            color: #333;
+            overflow-x: hidden;
+        }
+        header {
+            background: linear-gradient(90deg, #007bff, #00c6ff);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5em;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .sidebar-toggle:hover {
+            transform: scale(1.1);
+        }
+        .language-switch {
+            position: absolute;
+            top: 20px;
+            right: 60px; /* Adjusted to avoid overlap with toggle button */
+        }
+        .language-switch a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .language-switch a:hover {
+            color: #ffd700;
+        }
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .main-content {
+            flex: 3;
+            padding-right: 30px;
+        }
+        .sidebar {
+            flex: 1;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            position: fixed;
+            top: 80px;
+            right: -250px; /* Hidden by default */
+            width: 250px;
+            height: calc(100% - 100px);
+            z-index: 1000;
+        }
+        .sidebar.active {
+            transform: translateX(-250px); /* Slide in from right */
+        }
+        .sidebar h3 {
+            margin-top: 0;
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin-bottom: 15px;
+        }
+        .sidebar a {
+            color: #007bff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        .sidebar a i {
+            margin-right: 10px;
+        }
+        .sidebar a:hover {
+            color: #0056b3;
+        }
+        .article-preview {
+            border: 1px solid #e0e0e0;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s;
+        }
+        .article-preview:hover {
+            transform: translateY(-5px);
+        }
+        .article-preview h3 {
+            margin: 0;
+            color: #007bff;
+            font-size: 1.5em;
+        }
+        .article-preview p {
+            margin: 10px 0;
+            color: #666;
+            font-size: 0.95em;
+        }
+        .article-preview a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(90deg, #007bff, #00c6ff);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .cta-button:hover {
+            background: linear-gradient(90deg, #0056b3, #0099cc);
+            transform: scale(1.05);
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #333;
+            color: white;
+            margin-top: 30px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                position: fixed;
+                top: 80px;
+                right: -250px;
+                width: 200px;
+                height: calc(100% - 80px);
+            }
+            .sidebar.active {
+                transform: translateX(-200px);
+            }
+            .main-content {
+                padding-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TrendOrbit</h1>
+        <p>'you will stay ahead!'</p>
+        <div class="language-switch">
+            <a href="#english">English</a> | <a href="#hindi">हिंदी</a>
+        </div>
+        <button class="sidebar-toggle" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <div class="container">
+        <!-- मेन कंटेंट -->
+        <div class="main-content">
+            <!-- इंग्लिश सेक्शन (अमेरिका के लिए) -->
+            <section id="english">
+                <h2>Latest Blogs (English for USA)</h2>
+                <div class="article-preview">
+                    <h3><a href="article1 english.html">IPL 2025 Kickoff</a></h3>
+                    <p>IPL 2025 is set to begin on March 22 with an exciting KKR vs RCB match. This season introduces new RTM rules, promising thrilling player retentions.</p>
+                </div>
+                <div class="article-preview">
+                    <h3><a href="article2 english.html">Samsung Galaxy S25 Edge Launch</a></h3>
+                    <p>The Samsung Galaxy S25 Edge is rumored to feature AI tools and a 200MP camera, set to rival the iPhone 16 in 2025.</p>
+                </div>
+                <div class="article-preview">
+                    <h3><a href="article3 english.html">Attack on Israeli Citizen in Karnataka</a></h3>
+                    <p>A shocking assault case in Karnataka has led to strict action orders from CM Siddaramaiah, raising safety concerns for tourists.</p>
+                </div>
+                <div class="article-preview">
+                    <h3><a href="article4 english.html">Holi 2025 Preparations</a></h3>
+                    <p>Holi 2025 preparations are underway with organic colors gaining popularity across India, featuring special events in Delhi and Mathura.</p>
+                </div>
+                <a href="#" class="cta-button">Subscribe Now</a>
+            </section>
+
+            <!-- हिंदी सेक्शन (भारत के लिए) -->
+            <section id="hindi">
+                <h2>लेटेस्ट ब्लॉग्स (हिंदी में - भारत के लिए)</h2>
+                <div class="article-preview">
+                    <h3><a href="article1 hindi.html">IPL 2025 की शुरुआत</a></h3>
+                    <p>IPL 2025 22 मार्च से शुरू होगा, जिसमें KKR vs RCB का पहला मैच होगा और नए RTM नियम होंगे।</p>
+                </div>
+                <div class="article-preview">
+                    <h3><a href="article2 hindi.html">सैमसंग गैलेक्सी S25 एज लॉन्च</a></h3>
+                    <p>सैमसंग S25 एज में AI टूल्स और 200MP कैमरा होगा, जो 2025 में iPhone 16 को टक्कर देगा।</p>
+                </div>
+                <div class="article-preview">
+                    <h3><a href="article3 hindi.html">कर्नाटक में इज़राइली नागरिक पर हमला</a></h3>
+                    <p>कर्नाटक में इज़राइली नागरिक पर हमले के बाद CM सिद्धारमैया ने सख्त कार्रवाई के आदेश दिए हैं।</p>
+                </div>
+                <div class="article-preview">
+                    <h3><a href="article4 hindi.html">होली 2025 की तैयारियां</a></h3>
+                    <p>होली 2025 के लिए तैयारियां शुरू, जिसमें ऑर्गेनिक रंगों का चलन और दिल्ली-मथुरा में खास इवेंट्स।</p>
+                </div>
+                <a href="#" class="cta-button">अभी सब्सक्राइब करें</a>
+            </section>
+        </div>
+
+        <!-- साइडबार -->
+        <div class="sidebar" id="sidebar">
+            <h3>Explore Topics</h3>
+            <ul>
+                <li><a href="article1 hindi.html"><i class="fas fa-cricket"></i> Cricket</a></li>
+                <li><a href="article2 english.html"><i class="fas fa-laptop"></i> Technology</a></li>
+                <li><a href="article3 hindi.html"><i class="fas fa-newspaper"></i> News</a></li>
+                <li><a href="article4 hindi.html"><i class="fas fa-paint-brush"></i> Culture</a></li>
+                <li><a href="#deep-search"><i class="fas fa-search-plus"></i> Deep Search</a></li>
+            </ul>
+            <h3>Follow Us</h3>
+            <ul>
+                <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+            </ul>
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 TrendOrbit. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
