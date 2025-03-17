@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sanjaykumar187.github.io/trendorbit/sitemap.xml 
