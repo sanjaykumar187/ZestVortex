@@ -1,68 +1,11 @@
+User-agent: *
+Allow: /
+https://github.com/sanjaykumar187/ZestVortex/blob/main/sitemap.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sanjaykumar187.github.io/</loc>
   </url>
   <url>
-    <loc>https://sanjaykumar187.github.io/holi-2025-english.html</loc>
+    <loc>https://sanjaykumar187.github.io/shop.html</loc>
   </url>
-  <url>
-    <loc>https://sanjaykumar187.github.io/holi-2025-hindi.html</loc>
-  </url>
-  <url>
-    <loc>https://sanjaykumar187.github.io/ipl-2025-english.html</loc>
-  </url>
-  <url>
-    <loc>https://sanjaykumar187.github.io/ipl-2025-hindi.html</loc>
-  </url>
-  <url>
- <loc> https://sanjaykumar187.github.io/karnataka-news-english.html</loc>
-  </url>
-   <url>
- <loc> https://sanjaykumar187.github.io/karnataka-news-hindi.html</loc>
-  </url>
-  <url>
- <loc> https://sanjaykumar187.github.io/samsung-s25-hindi.html.html</loc>
-  </url>
-  <url>
- <loc> https://sanjaykumar187.github.io/samsung-s25-english.html</loc>
-  </url>
-   <url>
- <loc> https://sanjaykumar187.github.io/prison-break-reboot-2025.html</loc>
-  </url>
-    <url>
- <loc> https://sanjaykumar187.github.io/rumble-bitcoin-2025.html</loc>
-  </url>
-<url>
- <loc> https://sanjaykumar187.github.io/Blog1.html</loc>
-  </url>
-<url>
- <loc> https://sanjaykumar187.github.io/Blog2.html</loc>
-  </url>
-
-  <url>
- <loc> https://sanjaykumar187.github.io/Blog3.html</loc>
-  </url>
-
-  <url>
-  <loc>https://sanjaykumar187.github.io/index.html</loc>
-  </url>
-<url>
-  <loc>https://sanjaykumar187.github.io/Top AI Tools for 2025.html</loc>
-  </url>
-  <url>
-  <loc>https://sanjaykumar187.github.io/English 1.html</loc>
-  </url>
-  <url>
-  <loc>https://sanjaykumar187.github.io/Hindi 1.html</loc>
-  </url>
-  <url>
-  <loc>https://sanjaykumar187.github.io/Hinglish 1.html</loc>
-  </url>
-  
-<url>
-  <loc>https://sanjaykumar187.github.io/Blog4.html</loc>
-  </url>
-  
-
-</urlset>
