@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZestVortex</title>
+    <meta name="description" content="ZestVortex - Ignite your passion with inspiring blogs, motivational content, and premium products. Dive into free and premium blogs, shop curated items, and thrive!">
+    <meta name="keywords" content="ZestVortex, blogs, motivation, premium content, products, inspiration, lifestyle">
+    <meta name="author" content="Sanjay Kumar">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="ZestVortex">
+    <meta property="og:description" content="Explore inspiring blogs, motivational updates, and premium products at ZestVortex. Unleash your energy today!">
+    <meta property="og:image" content="https://yourwebsite.com/placeholder.jpg">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ZestVortex">
+    <meta name="twitter:description" content="Inspiring blogs, motivation, and premium products at ZestVortex.">
+    <meta name="twitter:image" content="https://yourwebsite.com/placeholder.jpg">
+
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+ <!-- Google tag (gtag.js) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-YE1DM9242L"></script>
+ <script>
+   window.dataLayer = window.dataLayer || [];
+   function gtag(){dataLayer.push(arguments);}
+   gtag('js', new Date());
+ 
+   gtag('config', 'G-YE1DM9242L');
+</script>
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="menu-btn">☰</div>
+        <h1>ZestVortex</h1>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="#">Premium</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Left: Blog Area -->
+        <div class="blog-area">
+            <!-- Free Blog -->
+            <h2>Free Blog Title <span class="blog-status free">Free</span></h2>
+            <img src="placeholder.jpg" alt="Blog Image" class="blog-image">
+            <input type="file" id="image-upload" accept="image/*" style="display: none;">
+            <p>Free content yaha likha jayega...</p>
+            <button class="like-btn">Like</button>
+            <span class="like-count">0</span>
+            <div class="comments">
+                <input type="text" placeholder="Add a comment" id="comment-input">
+                <button id="comment-btn">Post</button>
+                <div class="comment-list"></div>
+            </div>
+
+            <!-- Premium Blog -->
+            <h2>Premium Blog Title <span class="blog-status premium">Premium</span></h2>
+            <img src="premium-placeholder.jpg" alt="Premium Blog Image" class="blog-image">
+            <div class="premium-content">
+                <p class="teaser">Yeh premium content ka teaser hai...</p>
+                <button class="unlock-btn">Unlock Now (₹50)</button>
+            </div>
+        </div>
+
+        <!-- Right: Video Area -->
+        <div class="video-area">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0"></iframe>
+        </div>
+
+        <!-- Recent Updates Widget -->
+        <div class="updates-widget">
+            <h3>Recent Updates</h3>
+            <p>Latest motivation: "Keep pushing forward!"</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+        </div>
+        <div class="footer-links">
+            <a href="#">Premium</a> |
+            <a href="shop.html">Buy Products</a> |
+            <a href="#">Contact</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
